@@ -20,4 +20,15 @@ Una funcionalidad que queremos brindar es la de que un viaje pueda ser ocasional
 
 ## Requerimientos específicos
 
+El sistema deberá garantizar, pero no por ello limitarse a las siguientes especificaciones, escritas en formato de historias de usuario:
+
+1. Como usuario registrado quiero poder definir mis rutas para que otros puedan encontrarme y ocasionalmente compartir viajes
+2. Como usuario ocasional quiero poder buscar rutas afines a las mías, dando una tolerancia en cuadras a la redonda, para encontrarme con choferes que utilicen los mismos caminos que yo.
+3. Como usuario registrado quiero poder comparar reputación, costos, recorridos y distancias toleradas de los choferes cuyos caminos que coinciden con mis criterios, para poder hacer la mejor elección.
+4. Como usuario registrado quiero poder dar fe de mi identidad, y asegurarme de la identidad de los usuarios que subiran a mi auto para evitar problemas relativos a la inseguridad.
+5. Como usuario registrado quiero poder intercambiar mensajes con los posibles choferes/pasajeros del viaje para acordar detalles que escapen al alcance de la plataforma.
+6. Como usuario registrado quiero calificar a los choferes/pasajeros con los que haya tenido algún contacto para poder ayudar a formar su reputación.
+
+## Criterios de aceptación
+
 TBD
