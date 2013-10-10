@@ -1,7 +1,9 @@
 package carpooling
 
 class Usuario {
-	String nya
+	
+	String nombre
+	String apellido
 	Integer dni
 	String email
 	Integer telefono
@@ -9,7 +11,9 @@ class Usuario {
 	Integer contrasenia
 
     static constraints = {
-		nya blank: false, nullable: false, unique: true
+		
+		nombre blank: false, nullable: false
+		apellido blank: false, nullable: false
 		dni blank: false, nullable: false, unique: true
 		email blank: false, nullable: false, unique: true
 		telefono blank: false, nullable: false
