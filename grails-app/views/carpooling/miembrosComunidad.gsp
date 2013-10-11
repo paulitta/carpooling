@@ -34,7 +34,6 @@
 				<li><a href="index.html">HOME</a></li>
 				<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
 				<li><a href="registro_usuario.html">REGISTRATE</a></li>
-				<li><g:link controller="carpooling/IndexController" action="redirectMiembrosComunidadController">MIEMBROS DE LA COMUNIDAD</g:link></li>
 			</ul>
 		</div><!--fin menu-->
 		
