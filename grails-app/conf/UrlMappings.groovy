@@ -6,8 +6,9 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-
-        "/"(view:"/index")
+		
+		//"/"(view:"/index")
+        "/"(view:"/carpooling/index") // Modificado para que comience con el proyecto carpooling
         "500"(view:'/error')
 	}
 }
