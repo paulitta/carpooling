@@ -35,7 +35,7 @@
 				<li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
 				<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
 				<li><a href="registro_usuario.html">REGISTRATE</a></li>
-				<li><g:link controller="index" action="redirectMiembrosComunidadController">MIEMBROS DE LA COMUNIDAD</g:link></li>
+				<li><g:link controller="MiembrosComunidad" action="renderMiembrosComunidadView">MIEMBROS DE LA COMUNIDAD</g:link></li> <!-- modificado -->
 			</ul>
 		</div><!--fin menu-->
 		

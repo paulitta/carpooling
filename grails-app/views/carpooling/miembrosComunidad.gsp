@@ -38,6 +38,18 @@
 		</div><!--fin menu-->
 		
 		<div id="contenido">
+			<ul>
+				<g:each var="usuarios" in ='${(Usuarios)}'>
+				<li>
+					Nombre: ${usuarios.nombre} <br/>
+					Apellido: ${usuarios.apellido} <br/>
+					DNI: ${usuarios.dni} <br/>
+					Email: ${usuarios.email} <br/>
+					Telefono: ${usuarios.telefono} <br/>
+					Contraseña: ${usuarios.contrasenia} <br/>
+				</li>
+				</g:each>
+			</ul>
 		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div><!--fin contenedor-->
