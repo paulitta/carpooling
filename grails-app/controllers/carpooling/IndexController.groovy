@@ -1,10 +1,20 @@
 package carpooling
 
 class IndexController {
-
-    def redirectMiembrosComunidadController() {
+	
+	def index(){
 		
-		redirect(controller:"MiembrosComunidadController", action:"renderMiembrosComunidadView")
+	}
+
+    def redirectMiembrosComunidadController = {
+		
+		redirect(controller:"miembrosComunidad", action:"renderMiembrosComunidadView")
+		
+	}
+	
+	def renderIndexView =  {
+		
+		render(view:"/carpooling/index")
 		
 	}
 }

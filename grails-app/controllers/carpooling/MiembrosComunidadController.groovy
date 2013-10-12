@@ -1,10 +1,14 @@
 package carpooling
 
 class MiembrosComunidadController {
-
-    def renderMiembrosComunidadView() {
+	
+	def miembrosComunidad(){
 		
-		render(view:"miembrosComunidad")
+	}
+
+    def renderMiembrosComunidadView =  {
+		
+		render(view:"/carpooling/miembrosComunidad")
 		
 	}
 }

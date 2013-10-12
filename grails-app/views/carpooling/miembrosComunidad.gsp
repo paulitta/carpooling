@@ -22,16 +22,16 @@
 	<div id="contenedor">
 		
 		<div class="header">
-			<a href="${resource(dir: '/views/carpooling', file: 'index.gsp')}"> <!-- ver como hacer esto -->
+			<g:link controller="index" action="renderIndexView">
 
 				<img class="logo" src="${resource(dir: 'images/carpooling', file: 'logo.png')}" height="106" width="254" alt="logo" />
 				
-			</a>
+			</g:link>
 		</div><!--fin header_960-->
 
 		<div class="menu">
 			<ul>
-				<li><a href="index.html">HOME</a></li>
+				<li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
 				<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
 				<li><a href="registro_usuario.html">REGISTRATE</a></li>
 			</ul>
