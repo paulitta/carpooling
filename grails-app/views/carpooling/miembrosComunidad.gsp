@@ -38,18 +38,20 @@
 		</div><!--fin menu-->
 		
 		<div id="contenido">
-			<ul>
-				<g:each var="usuarios" in ='${(Usuarios)}'>
+		<div class="bg_contenido">
+		<h3>USUARIOS DE LA COMUNIDAD:</h3>
+		<br></br>
+				<g:each var="usuarios" in ='${(usuario)}'>
 				<li>
-					Nombre: ${usuarios.nombre} <br/>
-					Apellido: ${usuarios.apellido} <br/>
-					DNI: ${usuarios.dni} <br/>
-					Email: ${usuarios.email} <br/>
-					Telefono: ${usuarios.telefono} <br/>
-					Contraseña: ${usuarios.contrasenia} <br/>
+					<p>Nombre: ${usuarios.nombre}</p>
+					<p>Apellido: ${usuarios.apellido}</p>
+					<p>Email: ${usuarios.email}</p>
+					<br></br>
+					
 				</li>
 				</g:each>
-			</ul>
+		</div>
+		
 		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div><!--fin contenedor-->

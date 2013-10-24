@@ -1,18 +1,11 @@
 package carpooling
 
-
 class ViajePasajero {
+	Date horaSalida
+	Integer colaboracion
 	
-	Date diaPartida
-	Date horaPartida
-	Integer lugaresRequeridos // No se si es medio al dope este atributo
-	Integer colabora
-	
+	static belongsTo = [Usuario,Ruta]
     static constraints = {
-		
-		diaPartida blank: false, nullable: false
-		horaPartida blank: false, nullable: false
-		lugaresRequeridos minSize:1
-		
+		horaSalida ( blank: false, nullable: false)
     }
 }
