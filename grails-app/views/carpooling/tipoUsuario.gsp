@@ -49,12 +49,12 @@
 		
 		<div id="contenido">
 		 <div class="Layer-32">
-		   <g:link controller="index" action="renderViajeView">
+		   <g:link controller="viajeConductor" action="renderViajeConductorView">
 				<img class="tipo_usuario" src="${resource(dir: 'images/carpooling', file: 'Layer-32.jpg')}"  alt="conductor" />
 			</g:link>
           </div>
           <div class="Layer-34">
-          <g:link controller="index" action="renderBusquedaView">
+          <g:link controller="viajePasajero" action="renderViajePasajeroView">
 				<img class="tipo_usuario" src="${resource(dir: 'images/carpooling', file: 'Layer-34.jpg')}"  alt="pasajero" />
 			</g:link>
   
