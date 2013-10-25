@@ -31,35 +31,56 @@
 				<img class="logo" src="${resource(dir: 'images/carpooling', file: 'logo.png')}" height="106" width="254" alt="logo" />
 				
 			</g:link>
+			
 		</div><!--fin header_960-->
 
 		<div class="menu">
 			<ul>
-			    <li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
+				<li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
 				<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
 				<li><a href="perfil_usuario.html">MI PERFIL</a></li>
 				<li><a href="agregar_viajes.html">MIS VIAJES</a></li>
 				<li><g:link controller="index" action="renderTipoUsuarioView">TIPO USUARIO</g:link></li>
 				<li><g:link controller="MiembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
 				<li><a href="#">CERRAR SESION</a></li>
+
 			</ul>
 		</div><!--fin menu-->
 		
 		<div id="contenido">
+		  <h1>Realizar nueva busqueda</h1>
 		  <div class="seccion_imgs">
-		
-		<h4>USUARIOS DE LA COMUNIDAD:</h4>
-		<br></br>
-				<g:each var="usuarios" in ='${(usuario)}'>
-				<li>
-					<p>Nombre: ${usuarios.nombre} - Apellido: ${usuarios.apellido}</p>
-					<p>Email: ${usuarios.email}</p>
-					<br></br>
-					
-				</li>
-				</g:each>
+		   <g:form action="buscar" controller="viajePasajero"  method="post" >
+		     <div class="col-md-6">	
+		       <div class="form-group">
+		         <label>Desde:</label>
+		         <input id="desde" class="form-control" placeholder="Introduce una ubicacion.."  type='text' name='desde' value='${viajePasajero?.desde}' />
+		       </div>
+		       <div class="form-group">
+		         <label>Hasta:</label>
+		         <input id="hasta" class="form-control" placeholder="Introduce una ubicacion.."  type='text' name='hasta' value='${viajePasajero?.hasta}' />
+		       </div>
+		       <label>poner el mapa trazando recorrido</label>
+		     </div>
+		     
+		     <div class="col-md-6">
+		       <div class="form-group">
+		         <label>Hora de salida:</label>
+		         <input id="hora" class="form-control" placeholder="Formato hh:mm:ss.."  type='text' name='hora' value='${viajePasajero?.hora}' />
+		       </div>
+		       <div class="form-group">
+		         <label>Colaboración:</label>
+		         <input id="colaboracion" class="form-control" placeholder="$"  type='text' name='colaboracion' value='${viajePasajero?.colaboracion}' />
+		       </div>
+		        <center class="btn_vehiculo">
+		      <button type="submit" class="btn btn-success">Buscar</button>
+               <button type="reset" class="btn btn-default">Cancelar</button> 
+              </center>
 		    </div>
-		
+		    <div style="clear: both"></div>
+
+		  </g:form>
+          </div>
 		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div><!--fin contenedor-->

@@ -6,6 +6,10 @@
 <title>Carpooling BA</title>
 
 <link rel="stylesheet" href="${resource(dir: 'css', file: 'estilos.css')}" type="text/css" />
+<link rel="stylesheet" href="${resource(dir: 'bootstrap/css', file: 'bootstrap-responsive.css')}"  media="all" type="text/css" />
+<link rel="stylesheet" href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}" media="all" type="text/css" />
+<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}" ></script>
+<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}" ></script>
 
 </head>
 
@@ -34,13 +38,29 @@
 			<ul>
 				<li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
 				<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
-				<li><a href="registro_usuario.html">REGISTRATE</a></li>
-				
+				<li><a href="perfil_usuario.html">MI PERFIL</a></li>
+				<li><a href="agregar_viajes.html">MIS VIAJES</a></li>
+				<li><g:link controller="index" action="renderTipoUsuarioView">TIPO USUARIO</g:link></li>
+				<li><g:link controller="MiembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
+				<li><a href="#">CERRAR SESION</a></li>
+
 			</ul>
 		</div><!--fin menu-->
 		
 		<div id="contenido">
-
+		 <div class="Layer-32">
+		   <g:link controller="index" action="renderViajeView">
+				<img class="tipo_usuario" src="${resource(dir: 'images/carpooling', file: 'Layer-32.jpg')}"  alt="conductor" />
+			</g:link>
+          </div>
+          <div class="Layer-34">
+          <g:link controller="index" action="renderBusquedaView">
+				<img class="tipo_usuario" src="${resource(dir: 'images/carpooling', file: 'Layer-34.jpg')}"  alt="pasajero" />
+			</g:link>
+  
+          </div>
+          <div style="clear: both"></div>
+		 
 		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div><!--fin contenedor-->

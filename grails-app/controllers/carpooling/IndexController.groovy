@@ -17,4 +17,14 @@ class IndexController {
 		render(view:"/carpooling/index")
 		
 	}
+	def renderTipoUsuarioView={
+		render(view:"/carpooling/tipoUsuario") //Primera vista que ve el usuario cuando inicia sesion
+	}
+	def renderViajeView={
+		render(view:"/carpooling/publicarViaje")  // Donde un usuario va a publicar nuevo viaje
+	}
+	def renderBusquedaView={
+		render(view:"/carpooling/busquedaDeConductores") // Donde un usuario va a realizar una nueva busqueda
+	}
+	
 }
