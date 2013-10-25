@@ -40,22 +40,20 @@
 				<li><a href="perfil_usuario.html">MI PERFIL</a></li>
 				<li><a href="agregar_viajes.html">MIS VIAJES</a></li>
 				<li><g:link controller="index" action="renderTipoUsuarioView">TIPO USUARIO</g:link></li>
-				<li><g:link controller="MiembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
+				<li><g:link controller="miembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
 				<li><a href="#">CERRAR SESION</a></li>
 			</ul>
 		</div><!--fin menu-->
 		
 		<div id="contenido">
 		  <div class="seccion_imgs">
+		<h3 style="text-align:center"><i class="glyphicon glyphicon-globe"></i>Usuarios de la comunidad Carpooling BA</h3>
 		
-		<h4>USUARIOS DE LA COMUNIDAD:</h4>
-		<br></br>
-				<g:each var="usuarios" in ='${(usuario)}'>
+					<g:each var="usuarios" in ='${(usuario)}'>
 				<li>
 					<p>Nombre: ${usuarios.nombre} - Apellido: ${usuarios.apellido}</p>
 					<p>Email: ${usuarios.email}</p>
 					<br></br>
-					
 				</li>
 				</g:each>
 		    </div>

@@ -10,14 +10,14 @@
 <link rel="stylesheet" href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}" media="all" type="text/css" />
 <script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}" ></script>
 <script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}" ></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'google.js')}" ></script>   
 </head>
 
 <body>
 
 	<div id="bg_header">
 		<img src="${resource(dir: 'images/carpooling', file: 'header_bg.jpg')}" height="114" width="1159" alt="header_bg" />
-		
 		<hr class="linea"/>
 		<div id="barra"></div>
 		<div class="bg_contenido"></div>
@@ -41,44 +41,35 @@
 				<li><a href="perfil_usuario.html">MI PERFIL</a></li>
 				<li><a href="agregar_viajes.html">MIS VIAJES</a></li>
 				<li><g:link controller="index" action="renderTipoUsuarioView">TIPO USUARIO</g:link></li>
-				<li><g:link controller="MiembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
+				<li><g:link controller="miembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
 				<li><a href="#">CERRAR SESION</a></li>
-
 			</ul>
 		</div><!--fin menu-->
-		
 		<div id="contenido">
-		  <h1>Realizar nueva busqueda</h1>
+		  <h2>Realizar nueva busqueda</h2>
 		  <div class="seccion_imgs">
 		   <g:form action="buscar" controller="viajePasajero"  method="post" >
 		     <div class="col-md-6">	
 		       <div class="form-group">
+		       <br></br>
 		         <label>Desde:</label>
 		         <input id="desde" class="form-control" placeholder="Introduce una ubicacion.."  type='text' name='desde' value='${viajePasajero?.desde}' />
 		       </div>
+		       <br></br>
 		       <div class="form-group">
 		         <label>Hasta:</label>
-		         <input id="hasta" class="form-control" placeholder="Introduce una ubicacion.."  type='text' name='hasta' value='${viajePasajero?.hasta}' />
+		         <input id="hasta" class="form-control" placeholder="Introduce una ubicacion.." onchange="calcRoute();" type='text' name='hasta' value='${viajePasajero?.hasta}' />
+		         <br></br>
 		       </div>
-		       <label>poner el mapa trazando recorrido</label>
 		     </div>
-		     
 		     <div class="col-md-6">
-		       <div class="form-group">
-		         <label>Hora de salida:</label>
-		         <input id="hora" class="form-control" placeholder="Formato hh:mm:ss.."  type='text' name='hora' value='${viajePasajero?.hora}' />
-		       </div>
-		       <div class="form-group">
-		         <label>Colaboración:</label>
-		         <input id="colaboracion" class="form-control" placeholder="$"  type='text' name='colaboracion' value='${viajePasajero?.colaboracion}' />
-		       </div>
-		        <center class="btn_vehiculo">
-		      <button type="submit" class="btn btn-success">Buscar</button>
-               <button type="reset" class="btn btn-default">Cancelar</button> 
-              </center>
+		         <div id="map-canvas" style="width: 400px; height: 250px; margin-bottom: 8px"></div>
 		    </div>
+		      <center class="btn_vehiculo">
+		      <button type="submit" class="btn btn-warning">BUSCAR</button>
+               <button type="reset" class="btn btn-default">BORRAR</button> 
+              </center>
 		    <div style="clear: both"></div>
-
 		  </g:form>
           </div>
 		</div><!--fin contenido-->

@@ -41,16 +41,24 @@
 				<li><a href="perfil_usuario.html">MI PERFIL</a></li>
 				<li><a href="agregar_viajes.html">MIS VIAJES</a></li>
 				<li><g:link controller="index" action="renderTipoUsuarioView">TIPO USUARIO</g:link></li>
+				<li><g:link controller="miembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
 				<li><a href="#">CERRAR SESION</a></li>
 
 			</ul>
 		</div><!--fin menu-->
 		
 		<div id="contenido">
-		<h4><i class="glyphicon glyphicon-map-marker"></i>Viajes publicados que coinciden con la busqueda:</h4>
-		
-          <div style="clear: both"></div>
+		  <div class="seccion_imgs">
+		<h3 style="text-align:center"><i class="glyphicon glyphicon-map-marker"></i>Viajes publicados que coinciden con la busqueda</h3>
+		 <br></br>
 		 
+		 <!-- Si el resultado de la busqueda es positivo: que muestre un listado con los usuarios que poseen 
+		 auto.
+		 Si el resultado es negativo: que diga: "No se encontraron coincidencias para su busqueda" -->
+		 
+		 
+          <div style="clear: both"></div>
+		 </div>
 		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div><!--fin contenedor-->

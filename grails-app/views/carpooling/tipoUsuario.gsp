@@ -41,7 +41,7 @@
 				<li><a href="perfil_usuario.html">MI PERFIL</a></li>
 				<li><a href="agregar_viajes.html">MIS VIAJES</a></li>
 				<li><g:link controller="index" action="renderTipoUsuarioView">TIPO USUARIO</g:link></li>
-				<li><g:link controller="MiembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
+				<li><g:link controller="miembrosComunidad" action="renderMiembrosComunidadView">USUARIOS</g:link></li> 
 				<li><a href="#">CERRAR SESION</a></li>
 
 			</ul>

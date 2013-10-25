@@ -20,7 +20,7 @@ class IndexController {
 	def renderTipoUsuarioView={
 		render(view:"/carpooling/tipoUsuario") //Primera vista que ve el usuario cuando inicia sesion
 	}
-	def redirectViajeConductor={
+	def redirectViajeConductorController={
 		redirect(controller:"viajeConductor", action:"renderViajeConductorView")  // Donde un usuario va a publicar nuevo viaje
 	}
 		def redirectViajePasajeroController={
