@@ -92,6 +92,8 @@ function initialize() {
 			}
 		  });
 	});
+	
+	//input 2
 	  
 }
 
