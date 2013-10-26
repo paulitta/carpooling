@@ -11,6 +11,7 @@
 <script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}" ></script>
 <script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}" ></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 <script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'google.js')}" ></script>   
 </head>
 
@@ -53,12 +54,12 @@
 		       <div class="form-group">
 		       <br></br>
 		         <label>Desde:</label>
-		         <input id="desde" class="form-control" placeholder="Introduce una ubicacion.."  type='text' name='desde' value='${viajePasajero?.desde}' />
+		         <input id="desde" class="form-control"  type='text' name='desde' value='${viajePasajero?.desde}' />
 		       </div>
 		       <br></br>
 		       <div class="form-group">
 		         <label>Hasta:</label>
-		         <input id="hasta" class="form-control" placeholder="Introduce una ubicacion.." onchange="calcRoute();" type='text' name='hasta' value='${viajePasajero?.hasta}' />
+		         <input id="hasta" class="form-control" type='text' name='hasta' value='${viajePasajero?.hasta}' />
 		         <br></br>
 		       </div>
 		     </div>

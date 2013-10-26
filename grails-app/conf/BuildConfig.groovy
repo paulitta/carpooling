@@ -58,6 +58,7 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.0.0"
         compile ':cache:1.1.1'
+		
 		//PARA EL GOOGLE MAPS
 		compile ":jquery:1.10.2"
 		compile ":google-visualization:0.6.2"
