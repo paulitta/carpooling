@@ -51,21 +51,31 @@
 		  <div class="seccion_imgs">
 		   <g:form action="buscar" controller="viajePasajero"  method="post" >
 		     <div class="col-md-6">	
-		       <div class="form-group">
-		       <br></br>
-		         <label>Desde:</label>
-		         <input id="desde" class="form-control" placeholder="Introduce una ubicacion.."  type='text' name='desde' value='${viajePasajero?.desde}' />
-		       </div>
-		       <br></br>
-		       <div class="form-group">
-		         <label>Hasta:</label>
-		         <input id="hasta" class="form-control" placeholder="Introduce una ubicacion.." onchange="calcRoute();" type='text' name='hasta' value='${viajePasajero?.hasta}' />
-		         <br></br>
-		       </div>
-		     </div>
-		     <div class="col-md-6">
-		         <div id="map-canvas" style="width: 400px; height: 250px; margin-bottom: 8px"></div>
-		    </div>
+					<div class="form-group">
+						<label for="desde">Desde:</label>
+						<input type="text" id="desde" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="hasta">Hasta:</label>
+						<input type="text" id="hasta" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="Modelo">Hora de salida:</label>
+						<input type="text" class="form-control" placeholder="Formato hh:mm:ss..">
+					</div>
+					
+                    <div class="form-group">
+						<label for="colaboracion">Colaboración:</label>
+						<input type="text" class="form-control" placeholder="$">
+					</div>
+                </div>
+                
+                <div class="col-md-6">
+					<div id="map-canvas" style="width: 410px; height: 281px; margin: auto"></div>
+                </div>
+                
+                <div style="clear: both"></div>
+                
 		      <center class="btn_vehiculo">
 		      <button type="submit" class="btn btn-warning">BUSCAR</button>
                <button type="reset" class="btn btn-default">BORRAR</button> 
