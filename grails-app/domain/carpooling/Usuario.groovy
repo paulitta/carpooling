@@ -6,10 +6,11 @@ class Usuario {
 	Integer dni
 	String email
 	Integer telefono
-	//Byte[] imagen 
+	//Imagen imagen
 	String contrasenia
- 
-	static hasMany = [busquedas:ViajePasajero,viajes:ViajeConductor,vehiculos:Vehiculo]
+
+
+	//static hasMany = [busquedas:ViajePasajero,viajes:ViajeConductor,vehiculos:Vehiculo]
 	
     static constraints = {
 		 nombre (blank: false)
@@ -18,5 +19,6 @@ class Usuario {
 		email (blank: false ,email:true, unique: true)
 		telefono (blank: false, nullable: false)
 		contrasenia (blank: false, nullable:false)
+
     }
 }
