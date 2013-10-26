@@ -11,7 +11,8 @@
 <script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}" ></script>
 <script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}" ></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'google.js')}" ></script>   
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'google.js')}" ></script>
 </head>
 
 <body>
