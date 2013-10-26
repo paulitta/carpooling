@@ -10,7 +10,7 @@ class Usuario {
 	String contrasenia
 
 
-	static hasMany = [busquedas:ViajePasajero,viajes:ViajeConductor,vehiculos:Vehiculo]
+	//static hasMany = [busquedas:ViajePasajero,viajes:ViajeConductor,vehiculos:Vehiculo]
 	
     static constraints = {
 		 nombre (blank: false)
