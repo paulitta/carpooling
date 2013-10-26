@@ -19,6 +19,9 @@ class MiembrosComunidadController {
 		redirect action: 'renderMiembrosComunidadView'
 		//redirect action: 'miembrosComunidad'
 	}*/
-}
+		
+	}
+
+
 
 	

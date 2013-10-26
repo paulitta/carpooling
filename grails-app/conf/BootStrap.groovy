@@ -1,6 +1,5 @@
 import carpooling.Usuario
 
-
 class BootStrap {
 
     def init = { servletContext ->
@@ -17,5 +16,4 @@ class BootStrap {
 		
     }
 	
-
 }

@@ -8,46 +8,12 @@ import spock.lang.Specification
  */
 @TestFor(Usuario)
 class UsuarioSpec extends Specification {
-	void "fafsakjfhadsklfhdsa gfg,dfs g,dfsb g,.jthlqrk g.fds g,jrklewth r.gt t,.gh,l"(){
-		when:
-		def existingUsuario= new Usuario(nya:'Adrian Navarro', dni:18012387,email:'adriann@hotmail.com',
-		telefono:44562100, contrasenia:1234)
-		
-		mockForConstraintsTests(Usuario, [existingUsuario])
-		
-		def usuario = new Usuario()
-		
-		//Probando nullable:
+	void  "cuando no hay un dni no validar usuario"(){
+    when: 'un usuario nuevo sin dni'
+	def usuario=new Usuario(nombre: "Maria", apellido: "Lopez", email: "marialopez@gmail.com", telefono: 35282463 , contrasenia: 'abc123')
+	then:'que no sea valido'
+	assert!usuario.validate()
 	
-		then:
-		!usuario.validate()
-//		assert 'nullable' == usuario.errors['nya'].code
-//		assert 'nullable' == usuario.errors['dni'].code
-//		assert 'nullable' == usuario.errors['email'].code
-//		assert 'nullable' == usuario.errors['telefono'].code
-//		assert 'nullable' == usuario.errors['contrasenia'].code
-
-		//Probando blank:
-//		usuario = new Usuario(nya:'',dni:'',email:'',telefono:'',contrasenia:'')
-//		assert !usuario.validate()
-//		assert  'blank' == usuario.errors['nya'].code
-//		assert  'blank' == usuario.errors['dni'].code
-//		assert  'blank' == usuario.errors['email'].code
-//		assert  'blank' == usuario.errors['telefono'].code
-//		assert  'blank' == usuario.errors['contrasenia'].code
-
-		//Probando unique:
-//		usuario = new Usuario(nya:'Adrian Navarro', dni:18012387, email:'adriann@hotmail.com' )
-//		assert !usuario.validate()
-//		assert 'unique' == usuario.errors['nya'].code
-//		assert 'unique' == usuario.errors['dni'].code
-//		assert 'unique' == usuario.errors['email'].code
-
-//		usuario = new Usuario(nya:'Maria Perez', dni:32567891, email:'mariaperez@gmail.com',
-//		telefono: 1567542100, contrasenia:3433)
-//		assert usuario.validate()
-
-
 	}
-}
 
+}

@@ -1,20 +1,17 @@
 package carpooling
 
-
-
 class ViajeConductor {
-	
-	Usuario usuario // Viaje que lo carga un usuario
-	Date diaPartida
-	Date horaPartida
-	Vehiculo vehiculo // Composicion, aca esta el vehiculo con su cantidad de asientos
+	Date horaSalida
+	Date diaSalida
 	Integer colaboracion
+	Integer asientosLibres
 	String comentario
 
+	static belongsTo = [Usuario,Ruta,Vehiculo]
+	
 	static constraints = {
-		
-		diaPartida blank: false, nullable: false
-		horaPartida blank: false, nullable: false
-		
+		diaSalida  (blank: false, nullable: false)
+		horaSalida  (blank: false, nullable: false)
+		asientosLibres  (minSize:1)
 	}
 }
