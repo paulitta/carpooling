@@ -8,26 +8,11 @@ import spock.lang.Specification
  */
 @TestFor(Ruta)
 class RutaSpec extends Specification {
-	void testConstraints (){
-		def existingRuta = new Ruta(desde:'Plaza de Mayo - Hipólito Yrigoyen, Buenos Aires',
-		hasta: 'Florencio Varela 1903, San Justo, Buenos Aires')
+	void  "cuando no hay una ruta de origen no validar la ruta destino"(){
+		when: 'una ruta de destino sin punto de origen'
+		def ruta=new Ruta(hasta:"UNLaM")
+		then:'que no sea valido'
+		assert!ruta.validate()
 		
-		mockForConstraints(Ruta, [existingRuta])
-		
-		def ruta = new Ruta()
-		
-		//probando nullable:
-		assert !ruta.validate()
-		assert 'nullable' == ruta.errors['desde'].code
-		assert 'nullable' == ruta.errors['hasta'].code
-		
-		//probando blank:
-		ruta = new Ruta(desde:'',hasta:'')
-		assert !ruta.validate()
-		assert 'blank' == ruta.errors['desde'].code
-		assert 'blank' == ruta.errors['hasta'].code
-		
-		ruta = new Ruta (desde:'Cabildo, Ciudad Madero, Buenos Aires', hasta:'Hospital Italiano de Buenos Aires, Buenos Aires')
-		assert ruta.validate()
-	}
+		}
 }

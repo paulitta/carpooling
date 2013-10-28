@@ -1,0 +1,57 @@
+/* Botones Redes Sociales*/
+
+ul#m-soc4{   
+margin: 38px 0 0 10px;padding: 0;height:55px;}
+ul#m-soc4 li{
+list-style: none;margin: 4px;padding: 0;float:left;border: none;}
+ul#m-soc4 li a {
+background: url(../imagenes/sprite4-compartidisimo.png) no-repeat 0 0;width:41px;height:40px;
+margin:0;padding:0;display: block;position:relative;
+overflow: visible; 
+}
+ul#m-soc4 li a.twitter{
+background-position: 0 -41px;
+height:38px;
+}
+ul#m-soc4 li a.facebook{
+background-position: -41px -40px;
+}
+ul#m-soc4 li a.google{
+background-position:-82px -40px;
+}
+ul#m-soc4 li a.youtube{
+background-position:-123px -40px;
+}
+ul#m-soc4 li a.rss{
+background-position:-164px -40px;
+}
+ul#m-soc4 li a.twitter:hover{
+background-position: 0 0;
+}
+ul#m-soc4 li a.facebook:hover{
+background-position: -41px 0;
+}
+ul#m-soc4 li a.google:hover{
+background-position: -82px 0;
+}
+ul#m-soc4 li a.youtube:hover{
+background-position: -122px 0;
+}
+ul#m-soc4 li a.rss:hover{
+background-position: -163px 0;
+}
+ul#m-soc4 li a span{
+background: #555;position:absolute;
+top:-10px;left:-10px;width:auto;height:auto;opacity:0;
+padding:3px;text-align:left;
+color:#fff;filter:alpha(opacity=0);
+white-space:nowrap;border-radius:3px;font-size:12px;
+-webkit-transition: all 0.25s ease-in-out;
+-moz-transition: all 0.25s ease-in-out;
+-o-transition: all 0.25s ease-in-out;
+-ms-transition: all 0.25s ease-in-out;
+transition: all 0.25s ease-in-out;
+} ul#m-soc4 li a:hover{text-decoration:none} 
+ul#m-soc4 li a:hover span{opacity:.8;
+filter:alpha(opacity=80);
+top:-23px}

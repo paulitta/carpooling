@@ -17,4 +17,13 @@ class IndexController {
 		render(view:"/carpooling/index")
 		
 	}
+	def renderTipoUsuarioView={
+		render(view:"/carpooling/tipoUsuario") //Primera vista que ve el usuario cuando inicia sesion
+	}
+	def redirectViajeConductorController={
+		redirect(controller:"viajeConductor", action:"renderViajeConductorView")  // Donde un usuario va a publicar nuevo viaje
+	}
+		def redirectViajePasajeroController={
+		redirect(controller:"viajePasajero", action:"renderViajePasajeroView") // Donde un usuario realiza la busqueda
+    }
 }

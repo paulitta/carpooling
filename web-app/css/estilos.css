@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* CSS Document */ /* ESTILOS PARA CARPOOLING */
+/* CSS Document */
 
 /*Reset*/
 
@@ -83,12 +83,12 @@ html, body {
 
 .header {
 	width: 960px;
-	height: 114px;
+	height: 115px;
 	margin: auto;
 }
 
 .mod {
-    height: 54px;
+	height: 54px;
 }
 
 img.logo {
@@ -127,16 +127,16 @@ img.logo {
 
 .menu{
 	width: 960px;
-	height: 30px;
+	height: 32px;
 	margin: auto;
 }
 
-.menu ul li, .header ul li {
+.menu ul li{
 	display: inline;
 	padding: 0 42px 0 0;
 }
 
-.menu ul li a, .header ul li a{
+.menu ul li a{
 	color: white;
 	font: 14px normal Helvetica, Verdana, sans-serif;
 	text-decoration: none;
@@ -144,16 +144,22 @@ img.logo {
 
 .menu ul {
 	padding-top: 7px;
+	list-style: none;
+    margin: 0;
 }
 
-.menu ul li a:hover, .header ul li a:hover {
+.menu ul li a:hover {
+	border-bottom: 1px solid #FFFFFF;
+}
+
+a.activo {
 	border-bottom: 1px solid #FFFFFF;
 }
 
 /*----- Contenedor-----*/
 #contenedor {
 	width: 960px;
-    min-height: 100%;     
+	min-height: 100%;     
     height: auto !important;     
     height: 100%;     
     margin: 0 auto -187px; 
@@ -165,45 +171,328 @@ img.logo {
 #contenido {
 	width: 960px;
 	height: auto;
-	margin-top:4px;
 }
-	.bg_contenido{
+
+#contenido h1 {
+	margin-top: 5px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.bg_contenido{
 	width: 100%;
+	height: 260px;
 	background-image: linear-gradient(bottom, rgb(255,255,255) 23%, rgb(222,222,222) 60%);
 	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 23%, rgb(222,222,222) 60%);
 	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 23%, rgb(222,222,222) 60%);
 	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 23%, rgb(222,222,222) 60%);
 	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 23%, rgb(222,222,222) 60%);
-	font: 15px Verdana, Geneva, sans-serif;
-	font-weight: bold;
-	color: black;
-	
 }
-  .registro {
-	  font: 12px Verdana, Geneva, sans-serif;
-    }
- 
- .disp_table {
-     display: table;
- }
- /* You named this layer Capa 3 */
+/*PARA  LA BUSQUEDA Y OTRAS */
+
+/* You named this layer Capa 3 */
 .Layer-32 {
   float: left;
   width: 419px;
-  height: 223px;
-  padding-top: 100px;
+  height: 323px;
+  padding-top: 50px;
+  padding-left:auto;
+  background-color: #f0f0f0;
+	border: 2px solid #013973;
+	margin-top: 23px; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	 box-shadow: 0 12px 10px rgba(0, 0, 0, 0.7);
 }
+
 
 /* You named this layer Capa 4 */
 .Layer-34 {
   float: right;
   width: 419px;
-  height: 223px;
-  padding-top: 100px;
+  height: 323px;
+  padding-top: 50px;
+  background-color: #f0f0f0;
+	border: 2px solid #013973;
+	margin-top: 23px; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	 box-shadow: 0 12px 10px rgba(0, 0, 0, 0.7);
 } 
+
+/*-----Contenido HOME-----*/
+
+/*-----Columna izquierda-----*/
+
+#columna_izquierda{
+	width: 709px;
+	height: 100%;
+	border-right: 1px solid #5dbedb;
+	float: left;
+}
+
+.contenedor_secciones {
+	width: 693px;
+	height: 240px;
+}
+
+.contenedor_secciones span {
+	display: inline-block; 
+	margin-right: -1px; 
+	vertical-align: middle; 
+	height:278px;
+	width: 1px;
+}
+
+.contenedor_secciones:last-child {
+	margin-bottom: 10px; 
+}
+
+.mas{
+	margin-left: 50px;
+}
+
+.seccion_img {
+	width: 249px;
+	height: 220px;
+	background-color: #f0f0f0;
+	border: 2px solid #013973;
+	margin-top: 5px; 
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.seccion_img span {
+	display: inline-block; 
+	margin-right: -1px; 
+	vertical-align: middle; 
+	height:193px;
+	width: 1px;
+}
+
+.seccion_img img, .contenedor_secciones img{
+	vertical-align: middle; 
+}
+
+.seccion_img h4 {
+	margin: auto;
+}
+
+.uno {
+	float: left;
+}
+
+.dos {
+	float: right;
+}
+
+.fraternidad_h4 {
+	position: relative;
+	bottom: 20px;
+}
+
+/*-----Fin columna izquierda-----*/
+
+/*-----Columna derecha-----*/
+#columna_derecha{
+	width: 250px;
+	height: 100%;
+	float: left;
+}
+
+#columna_derecha h3{
+	padding: 5px 0 0 22px;
+	margin-bottom: 0;
+}
+
+#columna_derecha .form-group:first-child label{
+	padding-top: 5px;
+}
+
+#columna_derecha .form-group label{
+	padding-left: 15px;
+}
+
+#columna_derecha .form-group{
+	margin-bottom: 8px;
+	text-align: left;
+}
+
+#columna_derecha .form-group input{
+	margin: auto;
+	padding-left: 0;
+}
+
+#columna_derecha input {
+	width: 191px;
+}
+
+.login {
+	width: 228px;
+	height: 190px;
+	float: right;
+	margin-top: 3px;
+}
+
+#columna_derecha .form-group input::-webkit-input-placeholder {
+    padding-left: 5px;
+}
+#columna_derecha .form-group input:-moz-placeholder {
+    padding-left: 5px;
+}
+
+/*-----Fin columna derecha-----*/
+
+/*-----Fin Contenido HOME-----*/
+
+
+/*-----Contenido Como funciona-----*/
+
+#contenido h2 {
+	text-align: center;
+	margin: 0; 
+}
+
+#contenido .como_funciona_1 h3, #contenido .como_funciona_2 h3{
+	margin: 0;
+}
+
+#contenido .btn {
+	margin: 5px 0 15px;
+}
+
+.como_funciona_1, .como_funciona_2 {
+	width: 390px;
+	height: 200px;
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+
+.como_funciona_1 span, .como_funciona_2 span{
+	height: 160px;
+}
+
+.como_funciona_1 {
+	float: left;
+}
+
+.como_funciona_2 {
+	float: right;
+}
+
+.como_funciona span {
+	height: 186px;
+}
+
+.flecha {
+	margin-left: 15px;
+	margin-top: 90px;
+	float: left;
+}
+
+/*-----Fin Contenido Como funciona-----*/
+
+/*-----Contenido Agregar Vehiculo-----*/
+.seccion_imgs {
+	border: 2px solid #013973;
+	background-color: #f0f0f0;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+	color: #013973;
+	margin: 10px auto 30px;
+}
+
+.seccion_imgs .col-md-6 {
+    margin-top: 10px;
+}
+
+.seccion_imgs .col-md-6:first-child {
+    border-right: 1px solid #5dbedb;
+}
+
+.seccion_imgs .form-group:last-child {
+    margin-bottom: 0px;
+}
+
+.seccion_imgs input {
+    width: 90%;
+    margin: auto;
+}
+
+.seccion_imgs label {
+    padding-left: 22px;
+}
+
+.btn_vehiculo{
+    margin-top: 10px;
+}
+
+/*-----Fin Contenido Agregar Vehiculo-----*/
+
+/*-----Contenido Ingresar Vehiculo-----*/
+#checkboxset label {
+    padding: 0;
+}
+
+#checkboxset {
+    margin: 0 auto 10px;
+    width: 90%;
+}
+
+.form-group textarea, .form-group select {
+    width: 90%;
+    margin: auto;
+}
+
+.form-group textarea.form-control {
+    height: 153px;
+}
+
+/*-----Fin Contenido Ingresar Vehiculo-----*/
 
 #push {
 	height: 187px;
+}
+
+/*-----Caja Sombra-----*/
+.caja-sombra{
+    position: relative;
+}
+.caja-sombra:before, .caja-sombra:after{
+    content: "";
+    position: absolute;
+    z-index: -2;
+}
+.caja-sombra:before{
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+.caja-sombra:after{
+    bottom: 15px;
+    width: 50%;
+    height: 20%;
+    right: 10px;
+    left: auto;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
 }
 
 /*-----footer-----*/
@@ -238,6 +527,7 @@ img.logo {
 	color: #38879f;
 	border-bottom: 5px solid #82c0e7;
 	text-align: center;
+	margin: 0;
 }
 
 .secciones_foot ul li a {
@@ -253,8 +543,8 @@ img.logo {
 
 .secciones_foot ul {
 	padding-top: 12px;
-    list-style: none;
-    margin: 0;
+	list-style: none;
+    margin: 0; 
 }
 
 .secciones_foot li {
@@ -275,9 +565,8 @@ img.logo {
 }
 
 #foot_redes_sociales img{
-	margin: auto;
-	display:block;
-	padding-top: 12px; 
+	margin: 12px auto;
+	display:block; 
 }
 
 hr.linea_2 {
@@ -294,5 +583,5 @@ hr.linea_2 {
 	color: #38879f;
 	text-align: center;
 	letter-spacing: 4px;
-	padding-top: 4px;
+	padding: 4px 0 5px;
 }
