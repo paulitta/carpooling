@@ -159,12 +159,12 @@
 			<div id="foot_carpooling" class="secciones_foot">
 				<h3>CARPOOLING</h3>
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><g:link controller="index" action="renderIndexView">Home</g:link></li>
 					<li><a href="como_funciona.html">Como Funciona</a></li>
 					<li><a href="#">Registrate</a></li>
 					<li><a href="#">Contacto</a></li>
 					<li><g:link controller="index"
-							action="redirectMiembrosComunidadController">MIEMBROS DE LA COMUNIDAD</g:link></li>
+							action="redirectMiembrosComunidadController">Miembros de la comunidad</g:link></li>
 				</ul>
 			</div>
 

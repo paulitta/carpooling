@@ -13,4 +13,8 @@ class TipoUsuarioController {
 		redirect(controller:"busquedaDeViajes", action:"renderBusquedaDeViajesView")
 		
 	}
+	
+	def renderTipoUsuarioView={
+		render(view:"/carpooling/tipoUsuario")
+	}
 }

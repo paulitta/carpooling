@@ -39,7 +39,8 @@
 	<div id="contenedor">
 
 		<div class="header">
-			<g:link controller="busquedaDeViajes" action="redirectIndex">
+			<g:link controller="busquedaDeViajes"
+				action="redirectIndexController">
 
 				<img class="logo"
 					src="${resource(dir: 'images/carpooling', file: 'logo.png')}"
@@ -58,13 +59,15 @@
 
 		<div class="menu">
 			<ul>
-				<li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
+				<li><g:link controller="busquedaDeViajes"
+						action="redirectIndexController">HOME</g:link></li>
 				<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
 				<li><a href="perfil_usuario.html">MI PERFIL</a></li>
 				<li><a href="agregar_viajes.html">MIS VIAJES</a></li>
-				<li><g:link controller="index" action="renderTipoUsuarioView">TIPO USUARIO</g:link></li>
-				<li><g:link controller="miembrosComunidad"
-						action="renderMiembrosComunidadView">USUARIOS</g:link></li>
+				<li><g:link controller="busquedaDeViajes"
+						action="redirectTipoUsuarioController">TIPO USUARIO</g:link></li>
+				<li><g:link controller="busquedaDeViajes"
+						action="redirectMiembrosComunidadController">USUARIOS</g:link></li>
 				<li><a href="#">CERRAR SESION</a></li>
 			</ul>
 		</div>
@@ -72,7 +75,8 @@
 		<div id="contenido">
 			<h2>Realizar nueva busqueda</h2>
 			<div class="seccion_imgs">
-				<g:form controller="busquedaDeViajes" action="redirectResultadoBusqueda" method="post">
+				<g:form controller="busquedaDeViajes"
+					action="redirectResultadoBusquedaController" method="post">
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="desde">Desde:</label> <input type="text" id="desde"
@@ -120,7 +124,8 @@
 			<div id="foot_carpooling" class="secciones_foot">
 				<h3>CARPOOLING</h3>
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><g:link controller="busquedaDeViajes"
+							action="redirectIndexController">Home</g:link></li>
 					<li><a href="como_funciona.html">Como Funciona</a></li>
 					<li><a href="#">Registrate</a></li>
 					<li><a href="#">Contacto</a></li>
