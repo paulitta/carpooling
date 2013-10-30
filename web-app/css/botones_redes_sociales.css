@@ -5,7 +5,7 @@ margin: 38px 0 0 10px;padding: 0;height:55px;}
 ul#m-soc4 li{
 list-style: none;margin: 4px;padding: 0;float:left;border: none;}
 ul#m-soc4 li a {
-background: url(../imagenes/sprite4-compartidisimo.png) no-repeat 0 0;width:41px;height:40px;
+background: url(../images/carpooling/sprite4-compartidisimo.png) no-repeat 0 0;width:41px;height:40px;
 margin:0;padding:0;display: block;position:relative;
 overflow: visible; 
 }

@@ -456,6 +456,14 @@ a.activo {
 
 /*-----Fin Contenido Ingresar Vehiculo-----*/
 
+/*-----Contenido Busqueda-----*/
+#map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+/*-----Contenido Busqueda-----*/
+
 #push {
 	height: 187px;
 }

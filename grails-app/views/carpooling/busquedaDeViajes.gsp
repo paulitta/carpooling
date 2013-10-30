@@ -2,23 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <title>Carpooling BA</title>
 
-<link rel="stylesheet" type="text/css"
-	href="${resource(dir: 'css', file: 'estilos.css')}" />
+<link rel="stylesheet"
+	href="${resource(dir: 'css', file: 'estilos.css')}" type="text/css" />
 <link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'css', file: 'botones_redes_sociales.css')}" />
-<link rel="stylesheet" type="text/css"
+<link rel="stylesheet"
 	href="${resource(dir: 'bootstrap/css', file: 'bootstrap-responsive.css')}"
-	media="all" />
-<link rel="stylesheet" type="text/css"
+	media="all" type="text/css" />
+<link rel="stylesheet"
 	href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}"
-	media="all" />
+	media="all" type="text/css" />
 <script type="text/javascript"
 	src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}"></script>
 <script type="text/javascript"
 	src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}"></script>
-
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+<script type="text/javascript"
+	src="${resource(dir: 'js', file: 'google.js')}"></script>
 </head>
 
 <body>
@@ -35,7 +39,7 @@
 	<div id="contenedor">
 
 		<div class="header">
-			<g:link controller="index" action="renderIndexView">
+			<g:link controller="busquedaDeViajes" action="redirectIndex">
 
 				<img class="logo"
 					src="${resource(dir: 'images/carpooling', file: 'logo.png')}"
@@ -54,98 +58,55 @@
 
 		<div class="menu">
 			<ul>
-				<li><a class="activo">HOME</a></li>
+				<li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
 				<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
-				<li><a href="#">REGISTRATE</a></li>
+				<li><a href="perfil_usuario.html">MI PERFIL</a></li>
+				<li><a href="agregar_viajes.html">MIS VIAJES</a></li>
+				<li><g:link controller="index" action="renderTipoUsuarioView">TIPO USUARIO</g:link></li>
+				<li><g:link controller="miembrosComunidad"
+						action="renderMiembrosComunidadView">USUARIOS</g:link></li>
+				<li><a href="#">CERRAR SESION</a></li>
 			</ul>
 		</div>
 		<!--fin menu-->
-
 		<div id="contenido">
+			<h2>Realizar nueva busqueda</h2>
+			<div class="seccion_imgs">
+				<g:form controller="busquedaDeViajes" action="redirectResultadoBusqueda" method="post">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="desde">Desde:</label> <input type="text" id="desde"
+								class="form-control" />
+						</div>
+						<div class="form-group">
+							<label for="hasta">Hasta:</label> <input type="text" id="hasta"
+								class="form-control" />
+						</div>
+						<div class="form-group">
+							<label for="Modelo">Hora de salida:</label> <input type="text"
+								class="form-control" placeholder="Formato hh:mm:ss.." />
+						</div>
 
-			<div id="columna_izquierda">
-				<h1>Beneficios de Compartir Auto</h1>
-
-				<div class="contenedor_secciones">
-
-					<span></span>
-
-					<div class="seccion_img uno caja-sombra">
-						<span></span> <img
-							src="${resource(dir: 'images/carpooling', file: 'ahorro_dinero.png')}"
-							height="184" width="140" alt="" />
-						<h4>Ahorras Dinero</h4>
-
+						<div class="form-group">
+							<label for="colaboracion">Colaboración:</label> <input
+								type="text" class="form-control" placeholder="$" />
+						</div>
 					</div>
 
-					<img class="mas"
-						src="${resource(dir: 'images/carpooling', file: 'mas.png')}"
-						height="100" width="80" alt="" />
-
-					<div class="seccion_img dos caja-sombra">
-						<span></span> <img
-							src="${resource(dir: 'images/carpooling', file: 'fraternidad.png')}"
-							height="99" width="185" alt="" />
-						<h4 class="fraternidad_h4">Fomenta las relaciones laborales</h4>
+					<div class="col-md-6">
+						<div id="map-canvas"
+							style="width: 410px; height: 281px; margin: auto"></div>
 					</div>
 
 					<div style="clear: both"></div>
 
-				</div>
-
-				<div class="contenedor_secciones">
-
-					<span></span>
-
-					<div class="seccion_img uno caja-sombra">
-						<span></span> <img
-							src="${resource(dir: 'images/carpooling', file: 'menos_trafico.png')}"
-							height="182" width="182" alt="" />
-						<h4>Menos tráfico</h4>
-					</div>
-
-					<img class="mas"
-						src="${resource(dir: 'images/carpooling', file: 'mas.png')}"
-						height="100" width="80" alt="" />
-
-					<div class="seccion_img dos caja-sombra">
-						<span></span> <img
-							src="${resource(dir: 'images/carpooling', file: 'plantita.png')}"
-							height="147" width="197" alt="" />
-						<h4>Menos contaminación</h4>
-
-					</div>
+					<center class="btn_vehiculo">
+						<button type="submit" class="btn btn-warning">BUSCAR</button>
+						<button type="reset" class="btn btn-default">BORRAR</button>
+					</center>
 					<div style="clear: both"></div>
-
-				</div>
-
+				</g:form>
 			</div>
-			<!--fin columna_izquierda -->
-
-			<div id="columna_derecha">
-
-				<h3>Ingresa</h3>
-
-				<div class="login seccion_img caja-sombra">
-
-					<form role="form">
-						<div class="form-group">
-							<label for="usuario">Usuario</label> <input type="text"
-								class="form-control" placeholder="Ingrese usuario..." />
-						</div>
-						<div class="form-group">
-							<label for="password">Password</label> <input type="password"
-								class="form-control" placeholder="Ingrese contraseña..." />
-						</div>
-						<button type="submit" class="btn btn-success">Ingresar</button>
-					</form>
-
-				</div>
-			</div>
-			<!-- fin columna_derecha-->
-
-			<div style="clear: both"></div>
-
 		</div>
 		<!--fin contenido-->
 		<div id="push"></div>
@@ -163,8 +124,6 @@
 					<li><a href="como_funciona.html">Como Funciona</a></li>
 					<li><a href="#">Registrate</a></li>
 					<li><a href="#">Contacto</a></li>
-					<li><g:link controller="index"
-							action="redirectMiembrosComunidadController">MIEMBROS DE LA COMUNIDAD</g:link></li>
 				</ul>
 			</div>
 
