@@ -16,8 +16,13 @@ class IndexController {
 		render(view:"/carpooling/index")
 		
 	}
+	
 	def redirectTipoUsuarioController={
 		redirect(controller:"tipoUsuario", action:"renderTipoUsuarioView")
+	}
+	
+	def redirectComoFuncionaController={
+		redirect(controller:"comoFunciona", action:"renderComoFuncionaView")
 	}
 	
 }

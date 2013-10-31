@@ -55,7 +55,7 @@
 		<div class="menu">
 			<ul>
 				<li><a class="activo">HOME</a></li>
-				<li><a href="como_funciona.html">COMO FUNCIONA</a></li>
+				<li><g:link controller="index" action="redirectComoFuncionaController">COMO FUNCIONA</g:link></li>
 				<li><a href="#">REGISTRATE</a></li>
 			</ul>
 		</div>
@@ -160,7 +160,7 @@
 				<h3>CARPOOLING</h3>
 				<ul>
 					<li><g:link controller="index" action="renderIndexView">Home</g:link></li>
-					<li><a href="como_funciona.html">Como Funciona</a></li>
+					<li><g:link controller="index" action="redirectComoFuncionaController">Como Funciona</g:link></li>
 					<li><a href="#">Registrate</a></li>
 					<li><a href="#">Contacto</a></li>
 					<li><g:link controller="index"
