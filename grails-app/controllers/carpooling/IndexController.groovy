@@ -14,7 +14,7 @@ class IndexController {
 	
 	def renderIndexView =  {
 		
-		render(view:"carpooling/index")
+		render(view:"/carpooling/index")
 		
 	}
 	def renderTipoUsuarioView={

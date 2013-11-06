@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Carpooling BA - Busqueda de Viaje</title>
+<title>Carpooling BA - Agregar Viaje</title>
 
 <link rel="stylesheet"
 	href="${resource(dir: 'css', file: 'estilos.css')}" type="text/css" />
@@ -95,51 +95,77 @@
 		</div>
 		<!--fin menu-->
 		<div id="contenido">
-			<h2>Realizar nueva busqueda</h2>
-			<div class="seccion_imgs _imgs caja-sombra">
-				<g:form controller="busquedaDeViajes" action="redirectResultadoBusqueda" method="post">
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="desde">Desde:</label> <input type="text" id="desde"
-								class="form-control" />
-						</div>
-						<div class="form-group">
-							<label for="hasta">Hasta:</label> <input type="text" id="hasta"
-								class="form-control" />
-						</div>
-						<div class="form-group">
-							<label for="Modelo">Hora de salida:</label> <input type="text"
-								class="form-control" placeholder="Formato hh:mm:ss.." />
-						</div>
-
-						<label for="frecuencia">Frecuencia:</label>
-						<div id="checkboxset">
-	                		<input type="checkbox" id="checkbox1" name="checkbox"><label for="checkbox1">Dom</label>
-	                		<input type="checkbox" id="checkbox2" name="checkbox"><label for="checkbox2">Lun</label>
-	                		<input type="checkbox" id="checkbox3" name="checkbox"><label for="checkbox3">Mar</label>
-	                		<input type="checkbox" id="checkbox4" name="checkbox"><label for="checkbox4">Mier</label>
-	                		<input type="checkbox" id="checkbox5" name="checkbox"><label for="checkbox5">Jue</label>
-	                		<input type="checkbox" id="checkbox6" name="checkbox"><label for="checkbox6">Vie</label>
-	                		<input type="checkbox" id="checkbox7" name="checkbox"><label for="checkbox7">Sab</label>
-	                	</div>
+			<h1>Agregar nuevo viaje</h1>
+            <div class="seccion_imgs caja-sombra _imgs">
+            
+                <form role="form">
+				
+				<div class="col-md-6">	
+					<div class="form-group">
+						<label for="desde">Desde:</label>
+						<input type="text" class="form-control" id="desde">
 					</div>
-
-					<div class="col-md-6">
-						<div id="map-canvas"
-							style="width: 410px; height: 281px; margin: auto"></div>
+					<div class="form-group">
+						<label for="hasta">Hasta:</label>
+						<input type="text" class="form-control" id="hasta">
 					</div>
-
-					<div style="clear: both"></div>
-
-					<center class="btn_vehiculo">
-						<button type="submit" class="btn btn-warning">BUSCAR</button>
-						<button type="reset" class="btn btn-default">BORRAR</button>
-					</center>
-					<div style="clear: both"></div>
-				</g:form>
-			</div>
-		</div>
-		<!--fin contenido-->
+					<div class="form-group">
+						<label for="Modelo">Hora de salida:</label>
+						<input type="text" class="form-control" placeholder="Formato hh:mm:ss..">
+					</div>
+					
+					<label for="frecuencia">Frecuencia:</label>
+					<div id="checkboxset">
+                		<input type="checkbox" id="checkbox1" name="checkbox"><label for="checkbox1">Dom</label>
+                		<input type="checkbox" id="checkbox2" name="checkbox"><label for="checkbox2">Lun</label>
+                		<input type="checkbox" id="checkbox3" name="checkbox"><label for="checkbox3">Mar</label>
+                		<input type="checkbox" id="checkbox4" name="checkbox"><label for="checkbox4">Mier</label>
+                		<input type="checkbox" id="checkbox5" name="checkbox"><label for="checkbox5">Jue</label>
+                		<input type="checkbox" id="checkbox6" name="checkbox"><label for="checkbox6">Vie</label>
+                		<input type="checkbox" id="checkbox7" name="checkbox"><label for="checkbox7">Sab</label>
+                	</div>
+                	
+                	<div class="form-group">
+						<select name="vehiculo" class="form-control">
+                            <option>Seleccione un vehiculo</option>
+                        </select>
+					</div>
+					
+					<div class="form-group">
+						<label for="colaboracion">Colaboración:</label>
+						<input type="text" class="form-control" placeholder="$">
+					</div>
+					
+					<div class="form-group">
+						<label for="disponibilidad">Lugares disp:</label>
+						<input type="text" class="form-control" placeholder="Ingrese cantidad..">
+					</div>
+	
+                </div>
+                
+                <div class="col-md-6">
+                
+					<div id="map-canvas" style="width: 410px; height: 281px; margin: 0 auto 17px;"></div>
+					
+					<div class="form-group">
+						<label for="comentario">Comentario:</label>
+						<textarea class="form-control" placeholder="Algun detalle mas para agregar..."></textarea>
+					</div>
+                </div>
+                
+                <div style="clear: both"></div>
+                
+                <center class="btn_vehiculo">
+                    <button type="submit" class="btn btn-success">Publicar Viaje</button>
+                    <buttom type="reset" class="btn btn-default">Cancelar</buttom>
+                </center>
+                
+                </form>
+                
+            </div>
+            
+            <div style="clear: both"></div>
+		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div>
 	<!--fin contenedor-->

@@ -3,15 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Carpooling BA - Resultado de la Busqueda</title>
+<title>Carpooling BA - Como Funciona</title>
 
-<link rel="stylesheet" href="${resource(dir: 'css', file: 'estilos.css')}" type="text/css" />
+<link rel="stylesheet" type="text/css"
+	href="${resource(dir: 'css', file: 'estilos.css')}" />
 <link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'css', file: 'botones_redes_sociales.css')}" />
-<link rel="stylesheet" href="${resource(dir: 'bootstrap/css', file: 'bootstrap-responsive.css')}"  media="all" type="text/css" />
-<link rel="stylesheet" href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}" media="all" type="text/css" />
-<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}" ></script>
-<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}" ></script>
+<link rel="stylesheet" type="text/css"
+	href="${resource(dir: 'bootstrap/css', file: 'bootstrap-responsive.css')}"
+	media="all" />
+<link rel="stylesheet" type="text/css"
+	href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}"
+	media="all" />
+<script type="text/javascript"
+	src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}"></script>
+<script type="text/javascript"
+	src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}"></script>
 
 </head>
 
@@ -35,7 +42,7 @@
 			</g:link>
 			
 			<ul id="m-soc4">
-				<li><a class="facebook" href="#"><span>Facebook</span></a></li>
+				<li><a class="facebook" href="https://www.facebook.com"><span>Facebook</span></a></li>
 				<li><a class="twitter" href="#"><span>Twitter</span></a></li>
 				<li><a class="youtube" href="#"><span>YouTube</span></a></li>
 			</ul>
@@ -44,38 +51,48 @@
 
 		<div class="menu">
 			<ul class="menu_single">
-                <li><g:link controller="index" action="renderIndexView">Home</g:link></li>
-				<li><g:link controller="ComoFunciona" action="renderComoFuncionaView">Como Funciona</g:link></li>
+                <li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
+                <li><a class="activo">COMO FUNCIONA</a></li>
+                <li><g:link controller="Registrate" action="renderRegistrateView">REGISTRATE</g:link></li>
             </ul>
-            
-            <div class="dropdown">
-                <a data-toggle="dropdown" href="#">
-                <span>Fulanito de Tal</span>
-                <span class="glyphicon glyphicon-user"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><g:link controller="PerfilUsuario" action="renderPerfilUsuarioView">Mi Perfil</g:link></li>
-                <li><g:link controller="MisViajes" action="renderMisViajesView">Mis Viajes</g:link></li>
-                <li><g:link controller="index" action="renderTipoUsuarioView">Tipo Usuario</g:link></li>
-                <li class="divider"></li>
-                <li><a href="index.html">Cerrar Sesión</a></li>
-              </ul>
-            </div>
             
 		</div><!--fin menu-->
 		
 		<div id="contenido">
-		  <div class="seccion_imgs">
-		<h3 style="text-align:center"><i class="glyphicon glyphicon-map-marker"></i>Viajes publicados que coinciden con la busqueda</h3>
-		 <br></br>
-		 
-		 <!-- Si el resultado de la busqueda es positivo: que muestre un listado con los usuarios que poseen 
-		 auto.
-		 Si el resultado es negativo: que diga: "No se encontraron coincidencias para su busqueda" -->
-		 
-		 
-          <div style="clear: both"></div>
-		 </div>
+		  <h1>El sistema es muy fácil de usar</h1>
+			<h2>Seguí estos pasos..</h2>
+			<div class="seccion_img caja-sombra como_funciona_1">
+				<span></span>
+				<img src="${resource(dir: 'images/carpooling', file: 'formulario.png')}" height="140" width="130" alt="" />
+				<h3>Te registras</h3>
+			</div>
+
+			<img class="flecha" src="${resource(dir: 'images/carpooling', file: 'flecha.png')}" height="79" width="148" alt="" />
+
+			<div class="seccion_img caja-sombra como_funciona_2">
+				<span></span>
+				<img src="${resource(dir: 'images/carpooling', file: 'mapa.png')}" height="140" width="248" alt="" />
+				<h3>Cargas tu ruta de Viaje</h3>
+			</div>
+
+			<div class="seccion_img caja-sombra como_funciona_1">
+				<span></span>
+				<img src="${resource(dir: 'images/carpooling', file: 'lupa.png')}" height="147" width="124" alt="" />
+				<h3>Busca coincidencias de Viaje</h3>
+			</div>
+
+			<img class="flecha" src="${resource(dir: 'images/carpooling', file: 'flecha.png')}" height="79" width="148" alt="" />
+
+			<div class="seccion_img caja-sombra como_funciona_2">
+				<span></span>
+				<img src="${resource(dir: 'images/carpooling', file: 'auto.png')}" height="142" width="270" alt="" />
+				<h3>Y a compartir el viaje!</h3>
+			</div>
+
+			<div style="clear: both"></div>
+
+			<a class="btn btn-lg btn-block btn-success" href="registrate.html">Registrate</a>
+			
 		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div><!--fin contenedor-->
