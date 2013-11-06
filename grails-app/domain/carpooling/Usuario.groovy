@@ -8,6 +8,7 @@ class Usuario {
 	Integer telefono
 	//Imagen imagen
 	String contrasenia
+	Boolean conductor // En el caso que un usuario agregue un auto de forma correcta el conductor pasa a ser true.
 
 
 	//static hasMany = [busquedas:ViajePasajero,viajes:ViajeConductor,vehiculos:Vehiculo]
