@@ -211,7 +211,7 @@ a.activo {
 	min-height: 100%;     
     height: auto !important;     
     height: 100%;     
-    margin: 0 auto -187px; 
+    margin: 0 auto -160px; 
     z-index: 2;
     position: relative;
 }
@@ -414,6 +414,11 @@ a.activo {
 
 #contenido .btn {
 	margin: 5px 0 15px;
+	width: 135px !important;
+}
+
+#contenido .btn-lg {
+    width: auto !important;
 }
 
 .como_funciona_1, .como_funciona_2 {
@@ -536,7 +541,7 @@ a.activo {
 /*-----Contenido Busqueda-----*/
 
 #push {
-	height: 187px;
+	height: 160px;
 }
 
 /*-----Caja Sombra-----*/
@@ -578,7 +583,7 @@ a.activo {
 
 #footer {
 	width: 100%;
-	height: 186px;
+	height: 159px;
 	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(165,222,240) 67%);
 	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(165,222,240) 67%);
 	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(165,222,240) 67%);
@@ -597,7 +602,7 @@ a.activo {
 .secciones_foot {
 	width: 298px;
 	height: auto;
-	padding-top: 12px;
+	padding-top: 6px;
 }
 
 .secciones_foot h3{
@@ -610,7 +615,7 @@ a.activo {
 }
 
 .secciones_foot ul li a {
-	font: 14px normal Helvetica, Verdana, sans-serif;
+	font: 13px normal Helvetica, Verdana, sans-serif;
 	color: #38879f;
 	text-decoration: none;
 	cursor: pointer;
@@ -621,13 +626,13 @@ a.activo {
 }
 
 .secciones_foot ul {
-	padding-top: 12px;
+	padding-top: 5px;
 	list-style: none;
     margin: 0; 
 }
 
 .secciones_foot li {
-	padding-bottom: 11px;
+	padding-bottom: 5px;
 }
 
 #foot_carpooling {

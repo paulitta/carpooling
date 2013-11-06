@@ -13,5 +13,7 @@ class ComoFuncionaController {
 	def redirectIndexController = {
 
 		redirect(controller:"index", action:"renderIndexView")
+		
 	}
+
 }

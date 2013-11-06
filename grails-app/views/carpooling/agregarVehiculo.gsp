@@ -3,15 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Carpooling BA - Resultado de la Busqueda</title>
+<title>Carpooling BA - Agregar Vehiculo</title>
 
-<link rel="stylesheet" href="${resource(dir: 'css', file: 'estilos.css')}" type="text/css" />
+<link rel="stylesheet" type="text/css"
+	href="${resource(dir: 'css', file: 'estilos.css')}" />
 <link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'css', file: 'botones_redes_sociales.css')}" />
-<link rel="stylesheet" href="${resource(dir: 'bootstrap/css', file: 'bootstrap-responsive.css')}"  media="all" type="text/css" />
-<link rel="stylesheet" href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}" media="all" type="text/css" />
-<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}" ></script>
-<script type="text/javascript" src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}" ></script>
+<link rel="stylesheet" type="text/css"
+	href="${resource(dir: 'bootstrap/css', file: 'bootstrap-responsive.css')}"
+	media="all" />
+<link rel="stylesheet" type="text/css"
+	href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}"
+	media="all" />
+<script type="text/javascript"
+	src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}"></script>
+<script type="text/javascript"
+	src="${resource(dir: 'bootstrap/js', file: 'bootstrap.js')}"></script>
 
 </head>
 
@@ -44,8 +51,8 @@
 
 		<div class="menu">
 			<ul class="menu_single">
-                <li><g:link controller="index" action="renderIndexView">Home</g:link></li>
-				<li><g:link controller="ComoFunciona" action="renderComoFuncionaView">Como Funciona</g:link></li>
+                <li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
+				<li><g:link controller="ComoFunciona" action="renderComoFuncionaView">COMO FUNCIONA</g:link></li>
             </ul>
             
             <div class="dropdown">
@@ -65,17 +72,47 @@
 		</div><!--fin menu-->
 		
 		<div id="contenido">
-		  <div class="seccion_imgs">
-		<h3 style="text-align:center"><i class="glyphicon glyphicon-map-marker"></i>Viajes publicados que coinciden con la busqueda</h3>
-		 <br></br>
-		 
-		 <!-- Si el resultado de la busqueda es positivo: que muestre un listado con los usuarios que poseen 
-		 auto.
-		 Si el resultado es negativo: que diga: "No se encontraron coincidencias para su busqueda" -->
-		 
-		 
-          <div style="clear: both"></div>
-		 </div>
+		  <h1>Registrar vehiculo</h1>
+            <div class="seccion_imgs caja-sombra _imgs">
+                
+                <form role="form">
+				
+				<div class="col-md-6">	
+					<div class="form-group">
+						<label for="patente">Patente:</label>
+						<input type="text" class="form-control" placeholder="Ingrese patente..">
+					</div>
+					<div class="form-group">
+						<label for="marca">Marca:</label>
+						<input type="text" class="form-control" placeholder="Ingrese marca..">
+					</div>
+					<div class="form-group">
+						<label for="Modelo">Modelo:</label>
+						<input type="text" class="form-control" placeholder="Ingrese modelo..">
+					</div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+						<label for="telefono">Teléfono:</label>
+						<input type="text" class="form-control" placeholder="Ingrese teléfono..">
+					</div>
+					<div class="form-group">
+						<label for="Modelo">Asientos:</label>
+						<input type="text" class="form-control" placeholder="Ingrese cantidad..">
+					</div>
+                </div>
+                
+                <div style="clear: both"></div>
+                
+                <center class="btn_vehiculo">
+                    <button type="submit" class="btn btn-success">Agregar Vehiculo</button>
+                    <buttom type="reset" class="btn btn-default">Cancelar</buttom>
+                </center>
+                
+                </form>
+            </div>
+            
 		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div><!--fin contenedor-->

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Carpooling BA - Resultado de la Busqueda</title>
+<title>Carpooling BA - Mi Perfil</title>
 
 <link rel="stylesheet" href="${resource(dir: 'css', file: 'estilos.css')}" type="text/css" />
 <link rel="stylesheet" type="text/css"
@@ -54,8 +54,8 @@
                 <span class="glyphicon glyphicon-user"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li><g:link controller="PerfilUsuario" action="renderPerfilUsuarioView">Mi Perfil</g:link></li>
-                <li><g:link controller="MisViajes" action="renderMisViajesView">Mis Viajes</g:link></li>
+                <li><a href="perfil_usuario.html">Mi Perfil</a></li>
+                <li><a href="agregar_viajes.html">Mis Viajes</a></li>
                 <li><g:link controller="index" action="renderTipoUsuarioView">Tipo Usuario</g:link></li>
                 <li class="divider"></li>
                 <li><a href="index.html">Cerrar Sesión</a></li>
@@ -65,17 +65,9 @@
 		</div><!--fin menu-->
 		
 		<div id="contenido">
-		  <div class="seccion_imgs">
-		<h3 style="text-align:center"><i class="glyphicon glyphicon-map-marker"></i>Viajes publicados que coinciden con la busqueda</h3>
-		 <br></br>
-		 
-		 <!-- Si el resultado de la busqueda es positivo: que muestre un listado con los usuarios que poseen 
-		 auto.
-		 Si el resultado es negativo: que diga: "No se encontraron coincidencias para su busqueda" -->
-		 
-		 
-          <div style="clear: both"></div>
-		 </div>
+		  	<div id="contenido">
+            	<h3>Datos personales</h3>
+        	</div>
 		</div><!--fin contenido-->
 		<div id="push"></div>
 	</div><!--fin contenedor-->
