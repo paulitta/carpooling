@@ -9,6 +9,8 @@ class ResultadoBusquedaController {
 	
 	def renderResultadoBusquedaView =  {
 		
+		def desde = params.desde;
+		
 		render(view:"/carpooling/resultadoBusqueda")//aca se mostrarian los resultados
 		//buscamos conductores(usuarios) que coincidan con la ruta ingresada.
 		
