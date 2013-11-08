@@ -1,6 +1,6 @@
 package carpooling
 
-class ViajeConductor {
+class ViajeRegistrado {
 
 	String desde
 	String hasta
@@ -17,7 +17,7 @@ class ViajeConductor {
 	Integer asientosLibres // Tendria que ser calculado en base a la gente que se agrega al viaje, cuando recien se carga deberia tomar la cantidad que fue cargada en el vehiculo.
 	String comentario
 
-	static belongsTo = [Usuario, Vehiculo]
+	static belongsTo = Vehiculo // ViajeRegistrado pertenece a Vehículo
 
 	static constraints = {
 
