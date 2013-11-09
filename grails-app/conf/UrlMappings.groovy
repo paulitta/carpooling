@@ -8,7 +8,10 @@ class UrlMappings {
         }
 	
 		//  "/"(view:"/index")
-        "/"(view:"/carpooling/busquedaDeViajes") // Modificado para que comience con el proyecto carpooling.
-        "500"(view:'/error')
+        //"/"(view:"/carpooling/busquedaDeViajes") // Modificado para que comience con el proyecto carpooling.
+       
+		"/"(view:"/carpooling/tipoUsuario")
+		
+		 "500"(view:'/error')
 	}
 }

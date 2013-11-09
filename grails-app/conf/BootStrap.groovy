@@ -12,7 +12,7 @@ class BootStrap {
 		println usuario1
 
 
-		def usuario2 = new Usuario(nombre: "Lucia", apellido: "Roldan", dni: 29157077 , email: "luciaroldan@gmail.com", telefono: 44414566 , contrasenia: 'def456', conductor: false)
+		/*def usuario2 = new Usuario(nombre: "Lucia", apellido: "Roldan", dni: 29157077 , email: "luciaroldan@gmail.com", telefono: 44414566 , contrasenia: 'def456', conductor: false)
 		usuario2.save()
 
 		println usuario2
@@ -38,7 +38,7 @@ class BootStrap {
 		viaje2.save()
 		
 		println viaje2
-
+  */
 	}
 
 	def destroy = {
