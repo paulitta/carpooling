@@ -82,8 +82,8 @@
 
 	<div id="contenido">
 			<div class="Layer-32 caja-sombra">
-				<g:link controller="AgregarVehiculo"
-					action="show" name="show">
+				<g:link controller="MisViajes"
+					action="redirectAgregarVehiculoController" name="show">
 					<img class="tipo_usuario"
 						src="${resource(dir: 'images/carpooling', file: 'Layer-32.jpg')}"
 						alt="conductor" />
