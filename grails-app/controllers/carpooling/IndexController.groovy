@@ -6,10 +6,9 @@ class IndexController {
 		
 	}
 
-    def redirectMiembrosComunidadController = {
-		
+	def redirectMiembrosComunidadController = {
+
 		redirect(controller:"miembrosComunidad", action:"renderMiembrosComunidadView")
-		
 	}
 	
 	def renderIndexView =  {
@@ -17,13 +16,13 @@ class IndexController {
 		render(view:"/carpooling/index")
 		
 	}
-	def renderTipoUsuarioView={
-		render(view:"/carpooling/tipoUsuario") //Primera vista que ve el usuario cuando inicia sesion
+	
+	def redirectTipoUsuarioController={
+		redirect(controller:"tipoUsuario", action:"renderTipoUsuarioView")
 	}
-	def redirectViajeConductorController={
-		redirect(controller:"viajeConductor", action:"renderViajeConductorView")  // Donde un usuario va a publicar nuevo viaje
+	
+	def redirectComoFuncionaController={
+		redirect(controller:"comoFunciona", action:"renderComoFuncionaView")
 	}
-		def redirectViajePasajeroController={
-		redirect(controller:"viajePasajero", action:"renderViajePasajeroView") // Donde un usuario realiza la busqueda
-    }
+	
 }

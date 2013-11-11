@@ -3,18 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Carpooling BA - Tipo de Usuario</title>
+<title>Carpooling BA - Agregar Vehiculo</title>
 
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'estilos.css')}" type="text/css" />
+<link rel="stylesheet" type="text/css"
+	href="${resource(dir: 'css', file: 'estilos.css')}" />
 <link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'css', file: 'botones_redes_sociales.css')}" />
-<link rel="stylesheet"
+<link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'bootstrap/css', file: 'bootstrap-responsive.css')}"
-	media="all" type="text/css" />
-<link rel="stylesheet"
+	media="all" />
+<link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}"
-	media="all" type="text/css" />
+	media="all" />
 <script type="text/javascript"
 	src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}"></script>
 <script type="text/javascript"
@@ -25,40 +25,34 @@
 <body>
 
 	<div id="bg_header">
-		<img
-			src="${resource(dir: 'images/carpooling', file: 'header_bg.jpg')}"
-			height="114" width="960" alt="header_bg" />
-
-		<hr class="linea" />
+		<img src="${resource(dir: 'images/carpooling', file: 'header_bg.jpg')}" height="114" width="960" alt="header_bg" />
+		
+		<hr class="linea"/>
 		<div id="barra"></div>
 		<div class="bg_contenido"></div>
 	</div>
 
 	<div id="contenedor">
-
+		
 		<div class="header">
 			<g:link controller="index" action="renderIndexView">
 
-				<img class="logo"
-					src="${resource(dir: 'images/carpooling', file: 'logo.png')}"
-					height="106" width="254" alt="logo" />
-
+				<img class="logo" src="${resource(dir: 'images/carpooling', file: 'logo.png')}" height="106" width="254" alt="logo" />
+				
 			</g:link>
-
+			
 			<ul id="m-soc4">
-				<li><a class="facebook" href="https://www.facebook.com"><span>Facebook</span></a></li>
+				<li><a class="facebook" href="#"><span>Facebook</span></a></li>
 				<li><a class="twitter" href="#"><span>Twitter</span></a></li>
 				<li><a class="youtube" href="#"><span>YouTube</span></a></li>
 			</ul>
-
-		</div>
-		<!--fin header_960-->
+			
+		</div><!--fin header_960-->
 
 		<div class="menu">
-			
 			<ul class="menu_single">
                 <li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
-                <li><g:link controller="ComoFunciona" action="renderComoFuncionaView">COMO FUNCIONA</g:link></li>
+				<li><g:link controller="ComoFunciona" action="renderComoFuncionaView">COMO FUNCIONA</g:link></li>
             </ul>
             
             <div class="dropdown">
@@ -75,40 +69,55 @@
               </ul>
             </div>
             
-            <div style="clear: both"></div>
+		</div><!--fin menu-->
+		
+		<div id="contenido">
+		  <h1>Registrar vehiculo</h1>
+            <div class="seccion_imgs caja-sombra _imgs">
+                
+                <fieldset>
+				<g:form controller="AgregarVehiculo" action="guardarVehiculo" method="post"> 
+				<div class="col-md-6">	
+					<div class="form-group">
+						<label for="patente">Patente:</label>
+						<g:field type="text" name="patente" class="form-control" placeholder="Ingrese patente"/>
+					</div>
+					<div class="form-group">
+						<label for="marca">Marca:</label>
+						<g:field type="text" name="marca" class="form-control" placeholder="Ingrese marca"/>
+					</div>
+					<div class="form-group">
+						<label for="modelo">Modelo:</label>
+						<g:field type="text" name="modelo" class="form-control" placeholder="Ingrese modelo"/>
+					</div>
+                </div>
+                
+                <div class="col-md-6">
+					<div class="form-group">
+						<label for="asientos">Asientos:</label>
+						<g:field type="number" name="asientos" class="form-control" placeholder="Seleccione cantidad"/>
+					</div>
+                </div>
+                
+                <div style="clear: both"></div>
+                
+                <center class="btn_vehiculo">
+                    <g:submitButton name="submit" value="Agregar" class="btn btn-warning" />
+                   <!--<g:submitButton name="reset" class="btn btn-default" value="Cancelar"/>-->
+                </center>
+                
+                </g:form>
+                </fieldset>
+            </div>
             
-		</div>
-		<!--fin menu-->
-
-	<div id="contenido">
-			<div class="Layer-32 caja-sombra">
-				<g:link controller="MisViajes"
-					action="redirectAgregarVehiculoController" name="show">
-					<img class="tipo_usuario"
-						src="${resource(dir: 'images/carpooling', file: 'Layer-32.jpg')}"
-						alt="conductor" />
-				</g:link>
-			</div>
-			<div class="Layer-34 caja-sombra">
-				<g:link controller="TipoUsuario" action="redirectBusquedaDeViajes">
-					<img class="tipo_usuario"
-						src="${resource(dir: 'images/carpooling', file: 'Layer-34.jpg')}"
-						alt="pasajero" />
-				</g:link>
-
-			</div>
-			<div style="clear: both"></div>
-
-		</div>
-		<!--fin contenido-->
+		</div><!--fin contenido-->
 		<div id="push"></div>
-	</div>
-	<!--fin contenedor-->
-
+	</div><!--fin contenedor-->
+	
 	<div id="footer">
-
+		
 		<div class="footer_960">
-
+			
 			<div id="foot_carpooling" class="secciones_foot">
 				<h3>CARPOOLING</h3>
 				<ul>
@@ -118,7 +127,7 @@
 					<li><a href="#">Contacto</a></li>
 				</ul>
 			</div>
-
+			
 			<div id="foot_mas_info" class="secciones_foot">
 				<h3>MAS INFORMACION</h3>
 				<ul>
@@ -128,22 +137,18 @@
 					<li><a href="#">Políticas de Privacidad</a></li>
 				</ul>
 			</div>
-
+			
 			<div id="foot_redes_sociales" class="secciones_foot">
 				<h3>REDES SOCIALES</h3>
-				<img
-					src="${resource(dir: 'images/carpooling', file: 'redes_icons.png')}"
-					height="33" width="117" alt="redes_icons" />
+				<img src="${resource(dir: 'images/carpooling', file: 'redes_icons.png')}" height="33" width="117" alt="redes_icons" />
 			</div>
 
-			<hr class="linea_2" />
+			<hr class="linea_2"/>
 
-			<p>© 2013 | Crossing Barriers | Todos los derechos Reservados</p>
+			<p>© 2013  |  Crossing Barriers  |  Todos los derechos Reservados</p>
 
-		</div>
-		<!--fin footer_960-->
+		</div><!--fin footer_960-->
 
-	</div>
-	<!--fin footer-->
+	</div><!--fin footer-->
 </body>
 </html>

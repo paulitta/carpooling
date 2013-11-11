@@ -3,18 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Carpooling BA - Tipo de Usuario</title>
+<title>Carpooling BA</title>
 
-<link rel="stylesheet"
-	href="${resource(dir: 'css', file: 'estilos.css')}" type="text/css" />
+<title>Carpooling BA - Como Funciona</title>
+
+<link rel="stylesheet" type="text/css"
+	href="${resource(dir: 'css', file: 'estilos.css')}" />
 <link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'css', file: 'botones_redes_sociales.css')}" />
-<link rel="stylesheet"
+<link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'bootstrap/css', file: 'bootstrap-responsive.css')}"
-	media="all" type="text/css" />
-<link rel="stylesheet"
+	media="all" />
+<link rel="stylesheet" type="text/css"
 	href="${resource(dir: 'bootstrap/css', file: 'bootstrap.css')}"
-	media="all" type="text/css" />
+	media="all" />
 <script type="text/javascript"
 	src="${resource(dir: 'bootstrap/js', file: 'jquery.js')}"></script>
 <script type="text/javascript"
@@ -25,7 +27,7 @@
 <body>
 
 	<div id="bg_header">
-		<img
+	<img
 			src="${resource(dir: 'images/carpooling', file: 'header_bg.jpg')}"
 			height="114" width="960" alt="header_bg" />
 
@@ -37,6 +39,7 @@
 	<div id="contenedor">
 
 		<div class="header">
+
 			<g:link controller="index" action="renderIndexView">
 
 				<img class="logo"
@@ -55,53 +58,65 @@
 		<!--fin header_960-->
 
 		<div class="menu">
-			
 			<ul class="menu_single">
-                <li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
-                <li><g:link controller="ComoFunciona" action="renderComoFuncionaView">COMO FUNCIONA</g:link></li>
-            </ul>
-            
-            <div class="dropdown">
-                <a data-toggle="dropdown" href="#">
-                <span>Fulanito de Tal</span>
-                <span class="glyphicon glyphicon-user"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><g:link controller="PerfilUsuario" action="renderPerfilUsuarioView">Mi Perfil</g:link></li>
-                <li><g:link controller="MisViajes" action="redirectAgregarVehiculoController">Mis Viajes</g:link></li>
-                <li><g:link controller="index" action="redirectTipoUsuarioController">Tipo Usuario</g:link></li>
-                <li class="divider"></li>
-                <li><a href="index.html">Cerrar Sesión</a></li>
-              </ul>
-            </div>
-            
-            <div style="clear: both"></div>
-            
+				<li><g:link controller="index" action="renderIndexView">HOME</g:link></li>
+				<li><a class="activo">COMO FUNCIONA</a></li>
+				<li><g:link controller="Registrate"
+						action="renderRegistrateView">REGISTRATE</g:link></li>
+			</ul>
+
 		</div>
 		<!--fin menu-->
 
-	<div id="contenido">
-			<div class="Layer-32 caja-sombra">
-				<g:link controller="MisViajes"
-					action="redirectAgregarVehiculoController" name="show">
-					<img class="tipo_usuario"
-						src="${resource(dir: 'images/carpooling', file: 'Layer-32.jpg')}"
-						alt="conductor" />
-				</g:link>
-			</div>
-			<div class="Layer-34 caja-sombra">
-				<g:link controller="TipoUsuario" action="redirectBusquedaDeViajes">
-					<img class="tipo_usuario"
-						src="${resource(dir: 'images/carpooling', file: 'Layer-34.jpg')}"
-						alt="pasajero" />
-				</g:link>
+		<div id="contenido">
+			<h1>El sistema es muy fácil de usar</h1>
+			<h2>Seguí estos pasos..</h2>
 
+			<div class="seccion_img caja-sombra como_funciona_1">
+				<span></span> <img
+					src="${resource(dir: 'images/carpooling', file: 'formulario.png')}"
+					height="140" width="130" alt="" />
+				<h3>Te registras</h3>
 			</div>
+
+			<img class="flecha"
+				src="${resource(dir: 'images/carpooling', file: 'flecha.png')}"
+				height="79" width="148" alt="" />
+
+			<div class="seccion_img caja-sombra como_funciona_2">
+				<span></span> <img
+					src="${resource(dir: 'images/carpooling', file: 'mapa.png')}"
+					height="140" width="248" alt="" />
+				<h3>Cargas tu ruta de Viaje</h3>
+			</div>
+
+			<div class="seccion_img caja-sombra como_funciona_1">
+				<span></span> <img
+					src="${resource(dir: 'images/carpooling', file: 'lupa.png')}"
+					height="147" width="124" alt="" />
+				<h3>Busca coincidencias de Viaje</h3>
+			</div>
+
+			<img class="flecha"
+				src="${resource(dir: 'images/carpooling', file: 'flecha.png')}"
+				height="79" width="148" alt="" />
+
+			<div class="seccion_img caja-sombra como_funciona_2">
+				<span></span> <img
+					src="${resource(dir: 'images/carpooling', file: 'auto.png')}"
+					height="142" width="270" alt="" />
+				<h3>Y a compartir el viaje!</h3>
+			</div>
+
 			<div style="clear: both"></div>
+			
+			<g:link class="btn btn-lg btn-block btn-success" controller="Registrate" action="renderRegistrateView">Registrate</g:link>
 
 		</div>
 		<!--fin contenido-->
+
 		<div id="push"></div>
+
 	</div>
 	<!--fin contenedor-->
 
@@ -113,8 +128,10 @@
 				<h3>CARPOOLING</h3>
 				<ul>
 					<li><g:link controller="index" action="renderIndexView">Home</g:link></li>
-					<li><g:link controller="ComoFunciona" action="renderComoFuncionaView">Como Funciona</g:link></li>
-					<li><g:link controller="Registrate" action="renderRegistrateView">Registrate</g:link></li>
+					<li><g:link controller="ComoFunciona"
+							action="renderComoFuncionaView">Como Funciona</g:link></li>
+					<li><g:link controller="Registrate"
+							action="renderRegistrateView">Registrate</g:link></li>
 					<li><a href="#">Contacto</a></li>
 				</ul>
 			</div>
